@@ -1,11 +1,16 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: "export",
-};
-
-const withNextra = require("nextra")({
-  theme: "nextra-theme-docs",
-  themeConfig: "./theme.config.jsx",
+const withNextra = require('nextra')({
+  theme: 'nextra-theme-docs',
+  themeConfig: './theme.config.tsx'
 });
 
-module.exports = withNextra(nextConfig);
+module.exports = withNextra({
+  async redirects() {
+    return [
+      {
+        source: '/docs',
+        destination: '/docs/introduction',
+        permanent: false
+      }
+    ];
+  }
+});
