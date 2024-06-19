@@ -1,6 +1,5 @@
 export * from './logo';
 export * from './elements';
-export * from './snippet';
 export * from './tooltip';
 export * from './tv-component';
 export * from './window-resizer';

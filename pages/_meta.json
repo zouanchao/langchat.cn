@@ -15,10 +15,7 @@
   },
   "docs": {
     "title": "Document",
-    "type": "page",
-    "theme": {
-      "layout": "full"
-    }
+    "type": "page"
   },
   "about": {
     "title": "About",

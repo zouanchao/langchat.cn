@@ -4,13 +4,17 @@ const withNextra = require('nextra')({
 });
 
 module.exports = withNextra({
-  async redirects() {
-    return [
-      {
-        source: '/docs',
-        destination: '/docs/introduction',
-        permanent: false
-      }
-    ];
+  output: 'export',
+  images: {
+    unoptimized: true
   }
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/docs',
+  //       destination: '/docs/introduction',
+  //       permanent: false
+  //     }
+  //   ];
+  // }
 });
