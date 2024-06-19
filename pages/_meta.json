@@ -2,13 +2,29 @@
   "index": {
     "title": "Home",
     "type": "page",
-    "display": "hidden"
+    "display": "hidden",
+    "theme": {
+      "layout": "full"
+    }
+  },
+  "preview": {
+    "title": "Preview",
+    "type": "page",
+    "href": "https://example.com/contact",
+    "newWindow": true
   },
   "docs": {
-    "title": "Docs",
+    "title": "Document",
     "type": "page",
     "theme": {
-      "footer": false
+      "layout": "full"
+    }
+  },
+  "about": {
+    "title": "About",
+    "type": "page",
+    "theme": {
+      "layout": "full"
     }
   }
 }

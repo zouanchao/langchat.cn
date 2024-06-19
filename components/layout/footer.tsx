@@ -1,12 +1,91 @@
 import React from 'react';
 
 export const Footer = () => {
+  const list = [
+    {
+      title: 'Open Source',
+      children: [
+        {
+          label: 'Github',
+          link: 'https://github.com/tycoding/langchat'
+        },
+        {
+          label: 'LangChat',
+          link: 'https://langchat.cn'
+        },
+        {
+          label: 'TyCoding Blog',
+          link: 'http://tycoding.cn'
+        },
+        {
+          label: 'LangChat organization',
+          link: 'https://github.com/langchat'
+        }
+      ]
+    },
+    {
+      title: 'Preview',
+      children: [
+        {
+          label: 'Front Preview',
+          link: 'https://front.langchat.cn/'
+        },
+        {
+          label: 'Backend Preview',
+          link: 'https://backend.langchat.cn/'
+        }
+      ]
+    },
+    {
+      title: 'Resources',
+      children: [
+        {
+          label: 'Open AI',
+          link: 'https://openai.com/'
+        },
+        {
+          label: 'Ollama',
+          link: 'https://ollama.ai/'
+        },
+        {
+          label: '阿里通义千问',
+          link: 'https://tongyi.aliyun.com/'
+        },
+        {
+          label: '百度千帆大模型',
+          link: 'https://cloud.baidu.com/product/wenxinworkshop.html'
+        },
+        {
+          label: '智谱AI',
+          link: 'https://www.zhipuai.cn/'
+        }
+      ]
+    },
+    {
+      title: 'Stack',
+      children: [
+        {
+          label: 'LangChat',
+          link: 'https://github.com/tycoding/langchat'
+        },
+        {
+          label: 'Langchain4j',
+          link: 'https://github.com/langchain4j/langchain4j/'
+        },
+        {
+          label: 'Langchain',
+          link: 'https://www.langchain.com/'
+        }
+      ]
+    }
+  ];
+
   return (
     <footer>
       <div className="mx-auto my-4 !mb-14 !mt-10 max-w-7xl p-6">
         <div className="lg:flex">
-          <div className="-mx-6 w-full lg:w-2/5">
-            <div className="space-y-4 px-6">
+          <div className="-mx-6 w-full lg:w-1/4">
+            <div className="space-y-4">
               <div className="mb-1 flex items-center gap-2 space-x-1.5">
                 <img
                   alt="logo"
@@ -29,7 +108,7 @@ export const Footer = () => {
               <div className="-mx-2 !mt-7 flex">
                 <a
                   className="mx-2 text-gray-600 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
-                  href="#"
+                  href="/"
                 >
                   <svg
                     className="h-7 w-7 fill-current"
@@ -43,7 +122,7 @@ export const Footer = () => {
 
                 <a
                   className="mx-2 text-gray-600 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
-                  href="#"
+                  href="/"
                 >
                   <svg
                     className="h-5 w-5 fill-current"
@@ -57,7 +136,7 @@ export const Footer = () => {
 
                 <a
                   className="mx-2 text-gray-600 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
-                  href="#"
+                  href="/"
                 >
                   <svg
                     className="h-7 w-7 fill-current"
@@ -74,89 +153,23 @@ export const Footer = () => {
 
           <div className="mt-6 lg:mt-0 lg:flex-1">
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-              <div className="space-y-3">
-                <h3 className="uppercase text-gray-700 dark:text-white">
-                  About
-                </h3>
-                <a
-                  className="mt-2 block text-sm text-gray-600 hover:underline dark:text-gray-400"
-                  href="#"
-                >
-                  Company
-                </a>
-                <a
-                  className="mt-2 block text-sm text-gray-600 hover:underline dark:text-gray-400"
-                  href="#"
-                >
-                  community
-                </a>
-                <a
-                  className="mt-2 block text-sm text-gray-600 hover:underline dark:text-gray-400"
-                  href="#"
-                >
-                  Careers
-                </a>
-              </div>
-
-              <div className="space-y-3">
-                <h3 className="uppercase text-gray-700 dark:text-white">
-                  Blog
-                </h3>
-                <a
-                  className="mt-2 block text-sm text-gray-600 hover:underline dark:text-gray-400"
-                  href="#"
-                >
-                  Tec
-                </a>
-                <a
-                  className="mt-2 block text-sm text-gray-600 hover:underline dark:text-gray-400"
-                  href="#"
-                >
-                  Music
-                </a>
-                <a
-                  className="mt-2 block text-sm text-gray-600 hover:underline dark:text-gray-400"
-                  href="#"
-                >
-                  Videos
-                </a>
-              </div>
-
-              <div className="space-y-3">
-                <h3 className="uppercase text-gray-700 dark:text-white">
-                  Products
-                </h3>
-                <a
-                  className="mt-2 block text-sm text-gray-600 hover:underline dark:text-gray-400"
-                  href="#"
-                >
-                  Mega cloud
-                </a>
-                <a
-                  className="mt-2 block text-sm text-gray-600 hover:underline dark:text-gray-400"
-                  href="#"
-                >
-                  Aperion UI
-                </a>
-                <a
-                  className="mt-2 block text-sm text-gray-600 hover:underline dark:text-gray-400"
-                  href="#"
-                >
-                  Meraki UI
-                </a>
-              </div>
-
-              <div className="space-y-3">
-                <h3 className="uppercase text-gray-700 dark:text-white">
-                  Contact
-                </h3>
-                <span className="mt-2 block text-sm text-gray-600 hover:underline dark:text-gray-400">
-                  +1 526 654 8965
-                </span>
-                <span className="mt-2 block text-sm text-gray-600 hover:underline dark:text-gray-400">
-                  example@email.com
-                </span>
-              </div>
+              {list.map((item, index) => (
+                <div key={index} className="space-y-3">
+                  <h3 className="text-lg font-bold uppercase text-gray-700 dark:text-white">
+                    {item.title}
+                  </h3>
+                  {item.children.map((child, idx) => (
+                    <a
+                      key={idx}
+                      className="mt-2 block text-sm text-gray-600 no-underline hover:text-gray-900 dark:text-gray-400 dark:hover:text-white "
+                      href={child.link}
+                      target="_blank"
+                    >
+                      {child.label}
+                    </a>
+                  ))}
+                </div>
+              ))}
             </div>
           </div>
         </div>

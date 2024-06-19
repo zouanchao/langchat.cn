@@ -1,17 +1,17 @@
 {
-  "name": "tailwind-variants-docs",
+  "name": "langchat.cn",
   "private": true,
   "license": "MIT",
   "version": "0.0.1",
-  "description": "Tailwind variants documentation site",
-  "author": "Junior Garcia <jrgarciadev@gmail.com>",
-  "homepage": "https://github.com/nextui-org/tailwind-variants-docs#readme",
+  "description": "LangChat Docs",
+  "author": "TyCoding <langchat@outlook.com>",
+  "homepage": "https://github.com/tycoding/langchat",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nextui-org/tailwind-variants-docs.git"
+    "url": "git+https://github.com/tycoding/langchat.git"
   },
   "bugs": {
-    "url": "https://github.com/nextui-org/tailwind-variants-docs/issues"
+    "url": "https://github.com/tycoding/langchat/issues"
   },
   "scripts": {
     "dev": "next dev",
@@ -33,7 +33,7 @@
     "@vercel/analytics": "1.0.2",
     "classnames": "2.3.2",
     "clsx": "2.0.0",
-    "framer-motion": "11.2.10",
+    "framer-motion": "10.16.2",
     "next": "13.4.19",
     "nextra": "2.12.3",
     "nextra-theme-docs": "2.12.3",

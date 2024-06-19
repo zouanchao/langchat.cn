@@ -1,51 +1,52 @@
-import type { FC } from 'react';
-
-import FlashIcon from '@components/icons/flash';
-import CodeDocumentIcon from '@components/icons/code-document';
-import MagicIcon from '@components/icons/magic';
-import ServerIcon from '@components/icons/server';
+import {
+  CodeDocumentIcon,
+  FlashIcon,
+  MagicIcon,
+  ServerIcon
+} from '@components/icons';
 import { card } from '@components/elements';
-
-interface FeaturesProps {}
 
 export const features = [
   {
     name: 'Feature-rich',
     description:
       'Packed with powerful features like, slots, responsive variants, components composition, and more.',
-    icon: <FlashIcon className="stroke-black dark:stroke-white" />
+    icon: <FlashIcon className="text-pink-500" />
   },
   {
     name: 'Fully typed',
     description:
       'Auto-completion and type-safety are provided by TypeScript. No need to worry about typos.',
-    icon: <CodeDocumentIcon className="stroke-black dark:stroke-white" />
+    icon: <CodeDocumentIcon className="text-pink-500" />
   },
   {
     name: 'Safe',
     description:
       'Forget about TailwindCSS style conflicts. Tailwind Variants efficiently merges conflicting styles.',
-    icon: <MagicIcon className="stroke-black dark:stroke-white" />
+    icon: <MagicIcon className="text-pink-500" />
   },
   {
     name: 'Framework agnostic',
     description:
       "Tailwind Variants is a utility library that works with any framework. It's not tied to React.",
-    icon: <ServerIcon className="stroke-black dark:stroke-white" />
+    icon: <ServerIcon className="text-pink-500" />
   }
 ];
 
-const Features: FC<FeaturesProps> = () => {
+export default function Features() {
   return (
     <section className="z-10 my-10 gap-6">
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
         {features.map((feature, index) => (
           <div
             key={index}
-            className={card({ class: 'gap-2 p-4 backdrop-blur' })}
+            className={card({
+              class:
+                'transition-transform-background dark:bg-default-400/10 gap-2 border-transparent bg-white/5  p-4 text-foreground backdrop-blur '
+            })}
           >
             <div className="flex items-center">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-neutral/10 dark:bg-white/10">
+              <div className="flex items-center justify-center rounded-full bg-[#301050cc] p-2 text-pink-500 ">
                 {feature.icon}
               </div>
               <h3 className="mx-3 text-lg font-bold text-black dark:text-white">
@@ -60,6 +61,4 @@ const Features: FC<FeaturesProps> = () => {
       </div>
     </section>
   );
-};
-
-export default Features;
+}

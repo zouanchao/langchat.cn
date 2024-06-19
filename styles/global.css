@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    font-family: var(--font-sans) !important;
-  }
-
   article,
   main {
     overflow: visible !important;

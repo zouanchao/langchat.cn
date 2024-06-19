@@ -1,8 +1,10 @@
-# Tailwind variants docs
+# LangChat 
 
-## Getting Started
+Project repository: [https://github.com/tycoding/langchat](https://github.com/tycoding/langchat)
 
-Visit [https://tailwind-variants.org](https://tailwind-variants.org) to get started with **Tailwind Variants**.
+## Docs
+
+
 
 ## License
 

@@ -4,7 +4,7 @@ import { useConfig } from 'nextra-theme-docs';
 import React from 'react';
 import { useRouter } from 'next/router';
 
-import { Logo } from '@components';
+import { Logo, tvs } from '@components';
 import { Footer } from '@components/layout/footer';
 
 const config: DocsThemeConfig = {
@@ -16,8 +16,11 @@ const config: DocsThemeConfig = {
     <div className="flex items-center">
       <Logo height={30} />
       <b className="ml-1.5 hidden text-sm font-semibold sm:block sm:text-base">
-        Tailwind Variants
+        LangChat
       </b>
+      <span className={tvs.badge({ class: 'hidden sm:flex' })}>
+        By TyCoding
+      </span>
     </div>
   ),
   head: function useHead() {
@@ -27,8 +30,6 @@ const config: DocsThemeConfig = {
       'The power of Tailwind combined with a first-class variant API.';
     const image =
       config.frontMatter.image || 'https://tailwind-variants.org/banner.png';
-
-    // || "https://assets.vercel.com/image/upload/v1572282926/swr/twitter-card.jpg";
 
     return (
       <>
@@ -82,13 +83,9 @@ const config: DocsThemeConfig = {
     };
   },
   project: {
-    link: 'https://github.com/nextui-org/tailwind-variants'
+    link: 'https://github.com/tycoding/langchat'
   },
-  chat: {
-    link: 'https://discord.gg/9b6yyZKmH4'
-  },
-  docsRepositoryBase:
-    'https://github.com/nextui-org/tailwind-variants-docs/blob/main',
+  docsRepositoryBase: 'https://github.com/tycoding/langchat.cn',
   gitTimestamp: '',
   sidebar: {
     defaultMenuCollapseLevel: 1
