@@ -1,46 +1,14 @@
-import { tvs } from '@components/elements';
 import ModelsLogo from '@components/home/models';
 import Features from '@components/home/features';
 import SubscribePage from '@components/home/subscribe';
+import HeroPage from '@components/home/hero';
 
-export default function HomePage() {
+export default function HomePage({ data }) {
   return (
     <section className="mx-auto h-full max-w-6xl">
-      <div className="gap-12 pb-10 pt-20 dark:text-white">
-        <div className="mb-2 flex items-center justify-center">
-          <span className="rounded-full bg-gradient-to-r from-[#4F46E5] to-[#E114E5] px-3 py-0.5 text-sm text-white">
-            Empowering your AI dreams
-          </span>
-        </div>
-        <div className="mx-auto space-y-5 text-center">
-          <h2 className="mx-auto text-4xl font-extrabold dark:text-white md:text-5xl">
-            Quick Build of Enterprise Knowledge Base and <br />
-            <span className="bg-gradient-to-r from-[#4F46E5] to-[#E114E5] bg-clip-text text-transparent">
-              AI Large Model Project
-            </span>
-          </h2>
-          <p className="mx-auto max-w-2xl">
-            Multimodal, Advanced RAG, Function Call, Enterprise Knowledge Base,
-            RBAC Platform, and AI Large Model Solutions in the Java Ecosystem
-          </p>
-          <div className="flex flex-col items-center justify-center gap-x-3 space-y-3 sm:flex sm:flex-row sm:space-y-0">
-            <a className={tvs.button()} href="/docs/introduction">
-              Preview Front
-            </a>
-            <a
-              className={tvs.button({
-                flat: true,
-                color: 'neutral'
-              })}
-              href="https://github.com/tycoding/langchat"
-              rel="noopener noreferrer"
-              target="_blank"
-              title="github homepage"
-            >
-              Preview Client Front
-            </a>
-          </div>
-        </div>
+      <div className="pb-10 pt-20 dark:text-white">
+        <HeroPage data={data} />
+
         <div className="mt-14 ">
           <div className="bottom-0 z-0 w-full bg-[url('/looper-pattern.svg')] bg-left bg-no-repeat">
             <div className="flex w-full items-center justify-center">
@@ -53,13 +21,13 @@ export default function HomePage() {
               </div>
             </div>
             <div className="flex-1">
-              <Features />
+              <Features data={data} />
             </div>
             <div className="h-8" />
           </div>
         </div>
 
-        <ModelsLogo />
+        <ModelsLogo data={data} />
 
         <section>
           <div className="mx-auto gap-12 overflow-hidden py-28 text-gray-600 md:flex">
@@ -172,7 +140,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <SubscribePage />
+        <SubscribePage data={data} />
       </div>
     </section>
   );

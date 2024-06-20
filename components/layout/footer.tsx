@@ -97,7 +97,7 @@ export const Footer = () => {
                 <div className="cursor-pointer text-2xl">LangChat</div>
               </div>
 
-              <p className="mt-2 max-w-sm text-gray-200">
+              <p className="mt-2 max-w-sm dark:text-gray-200">
                 Empowering your AI dreams
               </p>
 

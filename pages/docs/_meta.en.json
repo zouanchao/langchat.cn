@@ -1,0 +1,11 @@
+{
+  "introduction": {
+    "title": "Introduction"
+  },
+  "why-tailwind-variants": {
+    "title": "Why Tailwind Variants?",
+    "display": "hidden"
+  },
+  "getting-started": "Getting Started",
+  "examples": "Examples"
+}

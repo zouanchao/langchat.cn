@@ -13,8 +13,8 @@ const config: DocsThemeConfig = {
     defaultTheme: 'dark'
   },
   i18n: [
-    { locale: 'en-US', text: 'English' },
-    { locale: 'zh-CN', text: '中文' }
+    { locale: 'en', text: 'English' },
+    { locale: 'zh', text: '中文' }
   ],
   logo: (
     <div className="flex items-center">
@@ -65,12 +65,9 @@ const config: DocsThemeConfig = {
         <meta content="en" httpEquiv="Content-Language" />
         <meta content={description} name="description" />
         <meta content={description} name="og:description" />
-        <meta content="summary_large_image" name="twitter:card" />
-        <meta content="@nextui-org" name="twitter:site" />
-        <meta content={image} name="twitter:image" />
-        <meta content={`${config.title} – tailwind-variants`} name="og:title" />
+        <meta content={`${config.title} – langchat`} name="og:title" />
         <meta content={image} name="og:image" />
-        <meta content="tailwind-variants" name="apple-mobile-web-app-title" />
+        <meta content="langchat" name="apple-mobile-web-app-title" />
       </>
     );
   },
@@ -78,7 +75,7 @@ const config: DocsThemeConfig = {
     const router = useRouter();
     const { frontMatter } = useConfig();
 
-    const defaultTitle = frontMatter.overrideTitle || 'Tailwind Variants';
+    const defaultTitle = frontMatter.overrideTitle || 'LangChat';
 
     return {
       description: frontMatter.description,
