@@ -8,27 +8,27 @@ import { card } from '@components/elements';
 
 export const features = [
   {
-    name: 'Feature-rich',
+    name: 'Quick Access',
     description:
-      'Packed with powerful features like, slots, responsive variants, components composition, and more.',
+      'Integrated with dozens of LLM models, supports visual dynamic configuration, and seamless updates.',
     icon: <FlashIcon className="text-pink-500" />
   },
   {
-    name: 'Fully typed',
+    name: 'Java Stack',
     description:
-      'Auto-completion and type-safety are provided by TypeScript. No need to worry about typos.',
+      'A full suite of Java technology stacks to help Java enterprise applications quickly develop LLM model projects.',
     icon: <CodeDocumentIcon className="text-pink-500" />
   },
   {
-    name: 'Safe',
+    name: 'Advanced',
     description:
-      'Forget about TailwindCSS style conflicts. Tailwind Variants efficiently merges conflicting styles.',
+      'Integrated with various AI use cases, incorporating multiple RAG solutions such as Agent FunctionCall.',
     icon: <MagicIcon className="text-pink-500" />
   },
   {
-    name: 'Framework agnostic',
+    name: 'Flow',
     description:
-      "Tailwind Variants is a utility library that works with any framework. It's not tied to React.",
+      'Supports workflow editing of large model applications, and customizes dedicated enterprise AI robots.',
     icon: <ServerIcon className="text-pink-500" />
   }
 ];

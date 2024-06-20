@@ -1,6 +1,7 @@
 import { tvs } from '@components/elements';
 import ModelsLogo from '@components/home/models';
 import Features from '@components/home/features';
+import SubscribePage from '@components/home/subscribe';
 
 export default function HomePage() {
   return (
@@ -170,6 +171,8 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        <SubscribePage />
       </div>
     </section>
   );

@@ -1,0 +1,27 @@
+{
+  "index": {
+    "title": "Home",
+    "type": "page",
+    "display": "hidden",
+    "theme": {
+      "layout": "full"
+    }
+  },
+  "preview": {
+    "title": "Preview",
+    "type": "page",
+    "href": "https://example.com/contact",
+    "newWindow": true
+  },
+  "docs": {
+    "title": "Document",
+    "type": "page"
+  },
+  "about": {
+    "title": "About",
+    "type": "page",
+    "theme": {
+      "layout": "full"
+    }
+  }
+}

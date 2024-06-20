@@ -1,6 +1,6 @@
 import type { DocsThemeConfig } from 'nextra-theme-docs';
 
-import { useConfig } from 'nextra-theme-docs';
+import { LocaleSwitch, ThemeSwitch, useConfig } from 'nextra-theme-docs';
 import React from 'react';
 import { useRouter } from 'next/router';
 
@@ -12,6 +12,10 @@ const config: DocsThemeConfig = {
   nextThemes: {
     defaultTheme: 'dark'
   },
+  i18n: [
+    { locale: 'en-US', text: 'English' },
+    { locale: 'zh-CN', text: '中文' }
+  ],
   logo: (
     <div className="flex items-center">
       <Logo height={30} />
@@ -87,6 +91,14 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: 'https://github.com/tycoding/langchat.cn',
   gitTimestamp: '',
+  navbar: {
+    extraContent: (
+      <>
+        <LocaleSwitch />
+        <ThemeSwitch />
+      </>
+    )
+  },
   sidebar: {
     defaultMenuCollapseLevel: 1
   },

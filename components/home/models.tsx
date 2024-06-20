@@ -6,7 +6,7 @@ interface ModelsProps {}
 
 const ModelsLogo: FC<ModelsProps> = () => {
   return (
-    <section className="relative z-10 mt-12 flex w-full flex-col items-center justify-center gap-6">
+    <section className="relative z-10 mt-14 flex w-full flex-col items-center justify-center gap-10">
       <h3 className="text-3xl text-gray-300">Supports large AI models</h3>
       <div className="flex max-w-5xl grid-cols-6 flex-wrap items-center justify-center gap-8 ">
         <div

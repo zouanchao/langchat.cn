@@ -4,17 +4,21 @@ const withNextra = require('nextra')({
 });
 
 module.exports = withNextra({
-  output: 'export',
+  // output: 'export',
+  i18n: {
+    locales: ['en-US', 'zh-CN'],
+    defaultLocale: 'en-US'
+  },
   images: {
     unoptimized: true
+  },
+  async redirects() {
+    return [
+      {
+        source: '/docs',
+        destination: '/docs/introduction',
+        permanent: false
+      }
+    ];
   }
-  // async redirects() {
-  //   return [
-  //     {
-  //       source: '/docs',
-  //       destination: '/docs/introduction',
-  //       permanent: false
-  //     }
-  //   ];
-  // }
 });
