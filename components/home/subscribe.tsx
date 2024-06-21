@@ -33,7 +33,7 @@ export default function SubscribePage({ data }) {
                 value={subject}
                 onChange={(e) => setSubject(e.target.value)}
               />
-              <button className="rounded-lg bg-[#eeeeee] p-2 px-3 font-medium shadow-md outline-none duration-150 hover:bg-gray-400  dark:text-black sm:px-4">
+              <button className="min-w-[5rem] rounded-lg bg-[#eeeeee] p-2 px-3 font-medium shadow-md outline-none duration-150 hover:bg-gray-400  dark:text-black sm:px-4">
                 {data.subscribe.send}
               </button>
             </form>

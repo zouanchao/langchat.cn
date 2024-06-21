@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const Footer = () => {
+export default function FooterPage({ data }) {
   const list = [
     {
-      title: 'Open Source',
+      title: data.title1,
       children: [
         {
           label: 'Github',
@@ -24,7 +24,7 @@ export const Footer = () => {
       ]
     },
     {
-      title: 'Preview',
+      title: data.title2,
       children: [
         {
           label: 'Front Preview',
@@ -37,7 +37,7 @@ export const Footer = () => {
       ]
     },
     {
-      title: 'Resources',
+      title: data.title3,
       children: [
         {
           label: 'Open AI',
@@ -62,7 +62,7 @@ export const Footer = () => {
       ]
     },
     {
-      title: 'Stack',
+      title: data.title4,
       children: [
         {
           label: 'LangChat',
@@ -82,7 +82,7 @@ export const Footer = () => {
 
   return (
     <footer>
-      <div className="mx-auto my-4 !mb-14 !mt-10 max-w-7xl p-6">
+      <div className="mx-auto !mb-14 !mt-10 max-w-7xl">
         <div className="lg:flex">
           <div className="-mx-6 w-full lg:w-1/4">
             <div className="mx-6 space-y-4">
@@ -139,8 +139,8 @@ export const Footer = () => {
             </div>
           </div>
 
-          <div className="mt-6 lg:mt-0 lg:flex-1">
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div className="mt-6 flex w-full items-center justify-between px-6 lg:mt-0 lg:flex-1">
+            <div className="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {list.map((item, index) => (
                 <div key={index} className="space-y-3">
                   <h3 className="text-lg font-bold uppercase text-gray-700 dark:text-white">
@@ -164,4 +164,4 @@ export const Footer = () => {
       </div>
     </footer>
   );
-};
+}

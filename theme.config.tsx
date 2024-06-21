@@ -5,7 +5,6 @@ import React from 'react';
 import { useRouter } from 'next/router';
 
 import { Logo, tvs } from '@components';
-import { Footer } from '@components/layout/footer';
 
 const config: DocsThemeConfig = {
   darkMode: true,
@@ -100,7 +99,7 @@ const config: DocsThemeConfig = {
     defaultMenuCollapseLevel: 1
   },
   footer: {
-    component: <Footer />
+    component: null
   }
 };
 

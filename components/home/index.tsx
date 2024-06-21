@@ -1,7 +1,10 @@
+import React from 'react';
+
 import ModelsLogo from '@components/home/models';
 import Features from '@components/home/features';
 import SubscribePage from '@components/home/subscribe';
 import HeroPage from '@components/home/hero';
+import FooterPage from '@components/layout/footer';
 
 export default function HomePage({ data }) {
   return (
@@ -141,6 +144,8 @@ export default function HomePage({ data }) {
         </section>
 
         <SubscribePage data={data} />
+
+        <FooterPage data={data} />
       </div>
     </section>
   );
