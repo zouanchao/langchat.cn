@@ -1,0 +1,44 @@
+import { Tab, Tabs } from 'nextra-theme-docs';
+
+# 环境准备
+
+项目运行之前首先要保证已经搭建好与之相匹配的开发环境，这里需要的最基础的版本要求：
+
+### 前端
+
+- Node.js > 18
+
+建议安装并使用`pnpm install`，不建议使用`npm`或`yarn`，如果你是中国用户遇到下载速度问题，推荐你安装下列镜像源：
+
+<Tabs items={['npm', 'yarn', 'pnpm']}>
+  <Tab>
+    ```bash copy
+    # 设置为国内镜像
+    npm config set registry https://registry.npmmirror.com
+    # 设置为官方镜像
+    npm config set registry https://registry.npmjs.org/
+    ```
+  </Tab>
+  <Tab>
+    ```bash copy
+    # 设置为国内镜像
+    yarn config set registry https://registry.npmmirror.com
+    # 设置为官方镜像
+    yarn config set registry https://registry.yarnpkg.com
+    ```
+  </Tab>
+  <Tab>
+    ```bash copy
+    # 设置为国内镜像
+    pnpm config set registry https://registry.npmmirror.com
+    # 设置为官方镜像
+    pnpm config set registry https://registry.npmjs.org/
+    ```
+  </Tab>
+</Tabs>
+
+### 后端
+
+因为考虑到项目前后端都使用的最新的技术栈，因此这里不再考虑支持`JDK8`了（当然如果你想要迁移到jdk8也是非常简单的，并不需要太高的迁移成本）
+
+蛀牙

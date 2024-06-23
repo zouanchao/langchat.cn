@@ -1,0 +1,54 @@
+import { Tab, Tabs } from 'nextra-theme-docs';
+
+# Getting started
+
+**Tailwind Variants** combines the power of TailwindCSS with a first-class variant API.
+
+## Setup TailwindCSS
+
+**Tailwind Variants** requires you to have TailwindCSS installed in your project. If you haven't installed
+TailwindCSS yet, you can follow the [TailwindCSS installation guide](https://tailwindcss.com/docs/installation).
+
+## Installation
+
+To use **Tailwind Variants** in your project, you can install it as a dependency:
+
+<Tabs items={['npm', 'yarn', 'pnpm']}>
+  <Tab>
+
+    ```bash copy
+    npm install tailwind-variants
+    ```
+
+  </Tab>
+  <Tab>
+
+    ```bash copy
+    yarn add tailwind-variants
+    ```
+
+  </Tab>
+  <Tab>
+
+    ```bash copy
+    pnpm add tailwind-variants
+    ```
+
+  </Tab>
+</Tabs>
+
+## Prettier plugin setup (optional)
+
+If you are using [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)
+to sort your class names, you can add `tv` to the list of functions that
+should be sorted.
+
+```js
+module.exports = {
+  plugins: [require('prettier-plugin-tailwindcss')],
+  tailwindFunctions: ['tv']
+};
+```
+
+## Contributing
+

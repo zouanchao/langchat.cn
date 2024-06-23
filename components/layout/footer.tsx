@@ -3,7 +3,7 @@ import React from 'react';
 export default function FooterPage({ data }) {
   const list = [
     {
-      title: data.title1,
+      title: data.footer.title1,
       children: [
         {
           label: 'Github',
@@ -24,20 +24,20 @@ export default function FooterPage({ data }) {
       ]
     },
     {
-      title: data.title2,
+      title: data.footer.title2,
       children: [
         {
-          label: 'Front Preview',
+          label: data.footer.frontBtn,
           link: 'https://front.langchat.cn/'
         },
         {
-          label: 'Backend Preview',
+          label: data.footer.clientBtn,
           link: 'https://backend.langchat.cn/'
         }
       ]
     },
     {
-      title: data.title3,
+      title: data.footer.title3,
       children: [
         {
           label: 'Open AI',
@@ -46,6 +46,10 @@ export default function FooterPage({ data }) {
         {
           label: 'Ollama',
           link: 'https://ollama.ai/'
+        },
+        {
+          label: 'Gemini',
+          link: 'https://gemini.google.com/'
         },
         {
           label: '阿里通义千问',
@@ -62,7 +66,7 @@ export default function FooterPage({ data }) {
       ]
     },
     {
-      title: data.title4,
+      title: data.footer.title4,
       children: [
         {
           label: 'LangChat',
@@ -81,11 +85,11 @@ export default function FooterPage({ data }) {
   ];
 
   return (
-    <footer>
-      <div className="mx-auto !mb-14 !mt-10 max-w-7xl">
+    <footer className="mt-20">
+      <div className="mx-auto !mb-14 !mt-40">
         <div className="lg:flex">
-          <div className="-mx-6 w-full lg:w-1/4">
-            <div className="mx-6 space-y-4">
+          <div className="w-full px-6 lg:w-1/4">
+            <div className="space-y-4">
               <div className="mb-1 flex items-center gap-2 space-x-1.5">
                 <img
                   alt="logo"
@@ -98,7 +102,7 @@ export default function FooterPage({ data }) {
               </div>
 
               <p className="mt-2 max-w-sm dark:text-gray-200">
-                Empowering your AI dreams
+                {data.footer.slogan}
               </p>
 
               <p className="mt-2 max-w-sm text-sm text-gray-400">

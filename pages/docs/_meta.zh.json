@@ -1,7 +1,7 @@
 {
-  "introduction": "Introduction",
-  "environment": "Environment",
-  "getting-started": "Getting Started",
+  "introduction": "介绍",
+  "environment": "环境准备",
+  "getting-started": "启动项目",
   "why-tailwind-variants": {
     "title": "Why Tailwind Variants?",
     "display": "hidden"

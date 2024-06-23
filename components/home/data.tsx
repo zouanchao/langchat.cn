@@ -49,6 +49,9 @@ export const EnData = {
     send: 'Contact'
   },
   footer: {
+    slogan: 'Empowering your AI dreams',
+    frontBtn: 'Preview Front',
+    clientBtn: 'Preview Client Front',
     title1: 'Open Source',
     title2: 'Preview',
     title3: 'Resources',
@@ -62,7 +65,7 @@ export const ZhData = {
     title1: '快速构建与实现企业知识库的',
     title2: 'AI大模型产品',
     des: '多模态、高级RAG、FunctionCall、企业知识库、Java全生态下的RBAC平台和AI大型模型解决方案',
-    frontBtn: '前端预览',
+    frontBtn: '服务端预览',
     clientBtn: '客户端预览'
   },
   features: [
@@ -96,5 +99,14 @@ export const ZhData = {
     title: '合作、定制开发、联系我们',
     des: '如需项目合作或定制开发，请随时给我们发邮件.',
     send: '联系'
+  },
+  footer: {
+    slogan: '赋能你的人工智能梦想',
+    frontBtn: '服务端预览',
+    clientBtn: '客户端预览',
+    title1: '开源产品',
+    title2: '预览',
+    title3: '资源',
+    title4: '技术栈'
   }
 };

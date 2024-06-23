@@ -1,105 +1,56 @@
-import Image from 'next/image';
+# LangChat Introduction
 
-# Introduction
+[LangChat](http://github.com/tycoding/langchat) leverages the Java ecosystem with a separated front-end and back-end architecture, utilizing the latest technology stack. The back-end is based on SpringBoot3, while the front-end utilizes Vue3.
+LangChat not only provides product solutions in the AI domain for enterprises but also serves as a complete Java enterprise application case. This system will guide you through the full development process of SpringBoot3 and Vue3, business modularization, and AI application integration solutions.
+Whether for enterprise development or personal learning, LangChat offers numerous learning cases.
+The involved technology stack includes:
 
-<Image
-  alt="tailwind-variants banner"
-  priority
-  quality={90}
-  className="mt-1 rounded-lg"
-  height="730"
-  src="/banner.png"
-  width="1460"
-/>
+**Back-end Stack:**
 
-**Tailwind Variants** a first-class variant API library for [TailwindCSS](https://tailwindcss.com/).
+- SpringBoot: MVC framework
+- Mybatis Plus: Persistence framework
+- Sa-Token: Authorization framework
+- Hutool: Java utility library
+- LiteFlow: Java process engine
+- AI LLM, and more
 
-## Key features
+**Front-end Stack:**
 
-#### Variants
+- Vue3
+- TypeScript
+- Node
+- EChart
+- NaiveUI
+- vue-flow
 
-Since [Stitches](https://stitches.dev) introduced variants, we became big fans of them, they are a great way to create a consistent design system, so we created **Tailwind Variants** to bring them to TailwindCSS.
+### Suitable for:
 
-<br />
+- Students who want to learn Vue & SpringBoot front-end and back-end separated application development
+- Students or enterprises looking to learn AI integration solutions in the Java ecosystem
+- Enterprises that need a rapidly deployable AI integration solution for their projects
+- Enterprises looking to build a knowledge base platform
+- Enterprises that need to customize the development of enterprise robot applications quickly
+- Enterprises that aim to construct advanced process orchestrated robots
+- ......
 
-```js copy
-import { tv } from 'tailwind-variants';
+### Project Structure
 
-const button = tv({
-  base: 'font-medium bg-blue-500 text-white rounded-full active:opacity-80',
-  variants: {
-    color: {
-      primary: 'bg-blue-500 text-white',
-      secondary: 'bg-purple-500 text-white'
-    },
-    size: {
-      sm: 'text-sm',
-      md: 'text-base',
-      lg: 'px-4 py-3 text-lg'
-    }
-  },
-  compoundVariants: [
-    {
-      size: ['sm', 'md'],
-      class: 'px-3 py-1'
-    }
-  ],
-  defaultVariants: {
-    size: 'md',
-    color: 'primary'
-  }
-});
+This project adopts a monolithic Java service with a multi-module architecture, featuring a complete and standardized code layer structure.
 
-return (
-  <button className={button({ size: 'sm', color: 'secondary' })}>
-    Click me
-  </button>
-);
+```text copy
+.
+├── LICENSE
+├── README.md
+├── README_zh.md
+├── langchat-aigc       # AIGC Application Layer Module
+├── langchat-auth       # RBAC Authentication and Authorization Module
+├── langchat-common     # Common Services
+├── langchat-core       # LLM Core Module
+├── langchat-flow       # Workflows Process Orchestration Module
+├── langchat-server     # SpringBoot Service
+├── langchat-ui         # Server-side Application Front-end Code
+├── langchat-ui-client  # Client-side Application Front-end Code
+├── langchat-upms       # UPMS RBAC Permission Management Module Code
+├── langchat.sql        # SQL Scripts
+└── pom.xml
 ```
-
-To learn more about variants, check the [variants](/docs/variants) page.
-
-#### Responsive variants
-
-**Tailwind Variants** allows you to apply variants to different screen sizes.
-
-<br />
-
-
-```js copy {15, 20-23}
-import { tv } from 'tailwind-variants';
-
-const button = tv(
-  {
-    base: 'font-semibold text-white py-1 px-3 rounded-full active:opacity-80',
-    variants: {
-      color: {
-        primary: 'bg-blue-500 hover:bg-blue-700',
-        secondary: 'bg-purple-500 hover:bg-purple-700',
-        success: 'bg-green-500 hover:bg-green-700',
-        error: 'bg-red-500 hover:bg-red-700'
-      }
-    }
-  },
-  {
-    responsiveVariants: ['xs', 'sm', 'md'] // `true` to apply to all screen sizes
-  }
-);
-
-button({
-  color: {
-    initial: 'primary',
-    xs: 'secondary',
-    sm: 'success',
-    md: 'error'
-  }
-});
-
-/**
- * Result:
- * font-semibold text-white py-1 px-3 rounded-full active:opacity-80 bg-blue-500 hover:bg-blue-700
- * xs:bg-purple-500 xs:hover:bg-purple-700 sm:bg-green-500 sm:hover:bg-green-700 md:bg-red-500
- * md:hover:bg-red-700
- */
-```
-

@@ -1,0 +1,84 @@
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import FooterPage from '../components/layout/footer';
+import { ZhData } from '../components/home/data';
+
+<style>
+  {`
+    article{
+       padding: 3rem 6rem !important;
+    }
+  `}
+</style>
+
+<div className='text-center mb-8'>
+  # LangChat 路线图
+</div>
+
+[LangChat](http://github.com/tycoding/langchat) 目前仍在积极开发中，有些功能仍处于完善中。更多的新特性，以及LLM的各种高级用法，
+后续将逐渐完善。本项目将积极响应LangChain4j官方的特性支持，集成更多企业级应用实践。
+
+例如：高级RAG、Function Call、数据解析支持、更多的LLM供应商 等等......
+
+同时[LangChat](http://github.com/tycoding/langchat)正在规划和实践一些功能：
+
+- 更多的消息发布渠道：WebSDK、飞书、微信、钉钉...
+- 复杂的流程编排Workflows，定制专属大模型应用...
+- 高级RAG，如接入更多的搜索引擎...
+- 接入更多大模型应用...
+- 更多的企业级应用实践...
+- ......
+
+## Web SDK & 消息渠道商
+
+目前，我们预开发一套 [LangChat Web SDK](http://github.com/tycoding/langchat-web-sdk) 项目，用于作为第三方Web端LLM Bot的快速集成，例如：客服机器人、企业私有知识库等等......
+
+[LangChat Web SDK](http://github.com/tycoding/langchat-web-sdk) 将使用原生JavaScript开发，借助Vite将整个项目打包为一个JS文件（文件中包含了js/css/html代码），
+
+打包后的JS文件，在任意的第三方Web系统中引入，都会在页面右下角展示一个聊天机器人入口，当初始化机器人信息后，第三方应用便可以零侵入性的集成聊天机器人。
+
+预览效果：
+
+<PhotoProvider>
+  <div className='flex overflow-hidden overflow-x-auto'>
+    <PhotoView src="/page/routemap_img1.png">
+      <img src="/page/routemap_img1.png" alt="" width='600'  />
+    </PhotoView>
+    <PhotoView src="/page/routemap_img2.png">
+      <img src="/page/routemap_img2.png" alt="" width='600'  />
+    </PhotoView>
+  </div>
+</PhotoProvider>
+
+对于第三方网页只需要嵌入JS即可：
+
+```html copy
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LangChat WebSDK Example</title>
+    <script src="../dist/langchat_web_sdk.min.js"></script>
+</head>
+<body>
+    <div>This is custom page container...</div>
+    <script>
+        // Configuring sdk Information
+        new initLangChat('key', ...)
+    </script>
+</body>
+</html>
+```
+
+同时，我们会逐渐尝试接入国内的一些应用渠道：微信客服机器人、企业微信机器人、飞书机器人、钉钉机器人...
+（当然开发中可能会受很多限制，例如微信客服接口需要企业信息才能调用等，欢迎有条件的朋友加入我们）
+
+## Workflows
+
+其实一开始我想做的就是基于WorkFlow机器人，而非现在这样通过不同节点（模型配置、Prompt配置、知识库配置）这样繁琐的配置。
+
+之前考虑的使用Vue-Flow和LiteFlow开发，但是苦于当时一直没有好的流程编排的执行方案，才导致了项目拖到现在。
+现在我考虑在现有功能基础上单独开发 **langchat-flow** 模块，提供一种快速、高自定义的编排方式定制和发布机器人应用。
+
+## More...
+
+<FooterPage data={ZhData} />

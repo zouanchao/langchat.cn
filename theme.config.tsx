@@ -82,6 +82,9 @@ const config: DocsThemeConfig = {
       titleTemplate: router.pathname !== '/' ? `%s – ${defaultTitle}` : ''
     };
   },
+  search: {
+    placeholder: 'Search Document...'
+  },
   project: {
     link: 'https://github.com/tycoding/langchat'
   },

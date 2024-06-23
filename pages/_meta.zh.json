@@ -1,6 +1,6 @@
 {
   "index": {
-    "title": "Home",
+    "title": "首页",
     "type": "page",
     "display": "hidden",
     "theme": {
@@ -8,20 +8,37 @@
     }
   },
   "preview": {
-    "title": "Preview",
-    "type": "page",
-    "href": "https://example.com/contact",
-    "newWindow": true
+    "title": "预览",
+    "type": "menu",
+    "items": {
+      "about": {
+        "title": "服务端预览",
+        "href": "http://backend.langchat.cn",
+        "newWindow": true
+      },
+      "contact": {
+        "title": "客户端预览",
+        "href": "http://front.langchat.cn",
+        "newWindow": true
+      }
+    }
   },
-  "docs": {
-    "title": "Document",
-    "type": "page"
-  },
-  "about": {
-    "title": "About",
+  "routemap": {
+    "title": "路线图",
     "type": "page",
     "theme": {
       "layout": "full"
     }
+  },
+  "about": {
+    "title": "关于",
+    "type": "page",
+    "theme": {
+      "layout": "full"
+    }
+  },
+  "docs": {
+    "title": "文档",
+    "type": "page"
   }
 }

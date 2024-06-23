@@ -9,13 +9,26 @@
   },
   "preview": {
     "title": "Preview",
-    "type": "page",
-    "href": "https://example.com/contact",
-    "newWindow": true
+    "type": "menu",
+    "items": {
+      "about": {
+        "title": "Front Preview",
+        "href": "http://backend.langchat.cn",
+        "newWindow": true
+      },
+      "contact": {
+        "title": "Client Preview",
+        "href": "http://front.langchat.cn",
+        "newWindow": true
+      }
+    }
   },
-  "docs": {
-    "title": "Document",
-    "type": "page"
+  "routemap": {
+    "title": "RouteMap",
+    "type": "page",
+    "theme": {
+      "layout": "full"
+    }
   },
   "about": {
     "title": "About",
@@ -23,5 +36,9 @@
     "theme": {
       "layout": "full"
     }
+  },
+  "docs": {
+    "title": "Document",
+    "type": "page"
   }
 }

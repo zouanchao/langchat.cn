@@ -1,0 +1,114 @@
+import FooterPage from '../components/layout/footer';
+import { ZhData } from '../components/home/data';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+
+<style>
+  {`
+    article{
+       padding: 3rem 6rem !important;
+    }
+  `}
+</style>
+
+<div className='text-center mb-8'>
+  # 关于 LangChat
+</div>
+
+[LangChat](http://github.com/tycoding/langchat) 是一个基于Java生态的企业AI知识库、大模型应用解决方案，帮助企业快速搭建AI大模型应用。
+同时，LangChat 也集成了RBAC权限体系，给企业提供一种开箱即用的AI大模型产品解决方案。
+
+## 技术栈
+
+[LangChat](http://github.com/tycoding/langchat) 使用Java生态，前后端分离，采用最新的技术栈开发，后端基于SpringBoot3、前端基于Vue3。
+LangChat不仅为企业提供AI领域的产品解决方案，也是一套完整的Java企业级应用案例。这套系统将带你完整的熟悉SpringBoot3、Vue3前后端开发流程、业务模块化、AI应用集成方案。
+无论是企业开发，还是个人学习，LangChat都将提供给你许多学习案例。
+所涉及到的技术栈：
+
+<div className='flex items-center mt-5'>
+  <div className='w-1/2'>
+    **后端：**
+
+    - SpringBoot：MVC框架
+    - Mybatis Plus：持久层框架
+    - Sa-Token：权限框架
+    - Hutool：Java工具类
+    - LiteFlow：Java流程化引擎
+    - AI LLM...
+  </div>
+
+  <div>
+    **前端：**
+
+    - Vue3
+    - TypeScript
+    - Node
+    - EChart
+    - NaiveUI
+    - vue-flow
+  </div>
+</div>
+
+## LangChain4j
+
+LangChat的AI核心实现基于 [LangChain4j](https://github.com/langchain4j/langchain4j)。LangChain4j是LangChain在Java生态下的解决方案，
+和LangChain的设计理念相同，LangChain4j提供了各种开箱即用LLM的抽象，简化与 Java 应用程序的集成LLMs。
+
+LangChat的各种Function Call、高级RAG、Web Search功能都来自于LangChain4j，更多的特性请查看LangChain官方文档：[https://docs.langchain4j.dev/](https://docs.langchain4j.dev/)
+
+<PhotoProvider>
+  <div className='flex justify-center my-4'>
+    <PhotoView src="/page/RAG.png">
+      <img src="/page/RAG.png" alt="" width='600'  />
+    </PhotoView>
+  </div>
+</PhotoProvider>
+
+## 支持集成的AI大模型
+
+| Provider                            | Native Image  | Sync Completion | Streaming Completion | Embedding | Image Generation | Scoring | Function Calling
+|--------------------------------------------| ------------- |---------------------------------------------------------------------| ----------- | ------ |-------------------------------| ------ |--------------------------------------------------------------------------------------------|
+| [OpenAI](/integrations/language-models/open-ai)                         |  | ✅ | ✅ | ✅ | ✅ | | ✅ |
+| [Azure OpenAI](/integrations/language-models/azure-open-ai)             |  | ✅ | ✅ | ✅ | ✅ | | ✅ |
+| [Hugging Face](/integrations/language-models/hugging-face)              |  | ✅ | | ✅ |  | | |  |
+| [Amazon Bedrock](/integrations/language-models/amazon-bedrock)         |  | ✅  | |✅ | ✅ | | |
+| [Google Vertex AI Gemini](/integrations/language-models/google-gemini) |  | ✅ | ✅ | | ✅ | | ✅ |
+| [Google Vertex AI](/integrations/language-models/google-palm)          | ✅ | ✅ | | ✅ | ✅ | | |
+| [Mistral AI](/integrations/language-models/mistral-ai)                  |  | ✅ | ✅ | ✅ |  | |✅ |
+| [DashScope](/integrations/language-models/dashscope)                   |  | ✅ | ✅ | ✅ |  | | ✅ |
+| [LocalAI](/integrations/language-models/local-ai)                       |  | ✅ | ✅ | ✅ |  | | ✅ |
+| [Ollama](/integrations/language-models/ollama)                         |  | ✅ | ✅ | ✅ |  | | |
+| Cohere                                                              |  | | | |  | ✅| |
+| [Qianfan](/integrations/language-models/qianfan)                       |  | ✅ | ✅ | ✅ |  | |✅ |
+| [ChatGLM](/integrations/language-models/chatglm)                       |  | ✅ | | |  | |
+| Nomic                                                                |  | | |✅ |  | | |
+| [Anthropic](/integrations/language-models/anthropic)                   |  |✅ | | |  | | ✅ |
+| [Zhipu AI](/integrations/language-models/zhipu-ai)                      |  |✅| ✅| ✅|  | |✅ |
+
+## 支持集成的向量库
+
+| Provider                                                                              | Storing Metadata | Filtering by Metadata | Removing Embeddings |
+|---------------------------------------------------------------------------------------|------------------|-----------------------|---------------------|
+| [In-memory](/integrations/embedding-stores/in-memory)                                 | ✅                | ✅                     | ✅                   |
+| [Astra DB](/integrations/embedding-stores/astra-db)                                   | ✅                |                       |                     |
+| [Azure AI Search](/integrations/embedding-stores/azure-ai-search)                     | ✅                |                       |                     |
+| [Azure CosmosDB Mongo vCore](/integrations/embedding-stores/azure-cosmos-mongo-vcore) | ✅                |                       |                     |
+| [Cassandra](/integrations/embedding-stores/cassandra)                                 | ✅                |                       |                     |
+| [Chroma](/integrations/embedding-stores/chroma)                                       | ✅                |                       |                     |
+| [Elasticsearch](/integrations/embedding-stores/elasticsearch)                         | ✅                | ✅                     | ✅                   |
+| [Infinispan](/integrations/embedding-stores/infinispan)                               | ✅                |                       |                     |
+| [Milvus](/integrations/embedding-stores/milvus)                                       | ✅                | ✅                     | ✅                   |
+| [MongoDB Atlas](/integrations/embedding-stores/mongodb-atlas)                         | ✅                |                       |                     |
+| [Neo4j](/integrations/embedding-stores/neo4j)                                         |                  |                       |                     |
+| [OpenSearch](/integrations/embedding-stores/opensearch)                               | ✅                |                       |                     |
+| [PGVector](/integrations/embedding-stores/pgvector)                                   | ✅                | ✅                     | ✅                   |
+| [Pinecone](/integrations/embedding-stores/pinecone)                                   |                  |                       |                     |
+| [Qdrant](/integrations/embedding-stores/qdrant)                                       | ✅                |                       |                     |
+| [Redis](/integrations/embedding-stores/redis)                                         | ✅                |                       |                     |
+| [Vearch](/integrations/embedding-stores/vearch)                                       | ✅                |                       |                     |
+| [Vespa](/integrations/embedding-stores/vespa)                                         |                  |                       |                     |
+| [Weaviate](/integrations/embedding-stores/weaviate)                                   | ✅                |                       | ✅                   |
+
+
+
+
+<FooterPage data={ZhData} />
