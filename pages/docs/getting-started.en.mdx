@@ -1,54 +1,100 @@
-import { Tab, Tabs } from 'nextra-theme-docs';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 
-# Getting started
+# Local Project Setup
 
-**Tailwind Variants** combines the power of TailwindCSS with a first-class variant API.
+Before starting the project, you need to have the **development environment** ready. Here, we demonstrate how to locally start the project using the latest version of IDEA.
 
-## Setup TailwindCSS
+### Clone & Open
 
-**Tailwind Variants** requires you to have TailwindCSS installed in your project. If you haven't installed
-TailwindCSS yet, you can follow the [TailwindCSS installation guide](https://tailwindcss.com/docs/installation).
+First, download the entire project code to your local machine:
 
-## Installation
-
-To use **Tailwind Variants** in your project, you can install it as a dependency:
-
-<Tabs items={['npm', 'yarn', 'pnpm']}>
-  <Tab>
-
-    ```bash copy
-    npm install tailwind-variants
-    ```
-
-  </Tab>
-  <Tab>
-
-    ```bash copy
-    yarn add tailwind-variants
-    ```
-
-  </Tab>
-  <Tab>
-
-    ```bash copy
-    pnpm add tailwind-variants
-    ```
-
-  </Tab>
-</Tabs>
-
-## Prettier plugin setup (optional)
-
-If you are using [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)
-to sort your class names, you can add `tv` to the list of functions that
-should be sorted.
-
-```js
-module.exports = {
-  plugins: [require('prettier-plugin-tailwindcss')],
-  tailwindFunctions: ['tv']
-};
+```bash
+git clone https://github.com/tycoding/langchat.git
 ```
 
-## Contributing
+Open the langchat project folder in IDEA:
 
+<PhotoProvider>
+  <div className='flex justify-center my-4'>
+    <PhotoView src="/page/open-langchat.png">
+      <img src="/page/open-langchat.png" alt="" width='500' />
+    </PhotoView>
+  </div>
+</PhotoProvider>
+
+### Download Dependencies
+
+**Front-end**
+
+The front-end primarily includes langchat-ui and langchat-ui-client modules, which require dependency installation using pnpm:
+
+```bash copy
+cd langchat-ui
+pnpm install
+
+cd langchat-ui-client
+pnpm install
+```
+
+**Back-end**
+
+After opening the project in IDEA, it will automatically load Maven dependencies. Apart from the above-mentioned ui modules, the rest are back-end components.
+Environment Configuration
+
+Once the code is cloned, you need to modify the configuration files of the back-end SpringBoot project to run it.
+
+**Import SQL***
+
+You need to create a database named langchat under MySQL8, then find the langchat.sql script in the project root directory and import the table structure.
+
+<PhotoProvider>
+  <div className='flex justify-center my-4'>
+    <PhotoView src="/page/mysql.png">
+      <img src="/page/mysql.png" alt="" width='700' />
+    </PhotoView>
+  </div>
+</PhotoProvider>
+
+**Modify application.yml**
+
+Note that application.yml is configured for the local environment by default. You can create a application-local.yml file locally, or modify it for the dev environment using application-dev.yml.
+
+<PhotoProvider>
+  <div className='flex justify-center my-4'>
+    <PhotoView src="/page/project.png">
+      <img src="/page/project.png" alt="" width='700' />
+    </PhotoView>
+  </div>
+</PhotoProvider>
+
+application-dev.yml contains the most basic environment configuration requirements:
+
+1. To start the project, you must configure mysql and redis information properly.
+2. langchat.auth defines the super administrator login information for the back-end management system, with is-demo-dev indicating whether to enable the demo environment.
+3. langchat.vectorstore defines the information for the LLM vector store, currently using the milvus vector store, though it may change to PgVector or another in the future.
+4. langchat.web-search.google defines the key information for Google search functionality, which can be configured as needed.
+
+Note: The LLM configurations may change in the future, and I will specifically introduce the environment configuration parameters of langchat in a new chapter.
+Additionally, because the configuration of the LLM large model is dynamically set on the front-end, it does not need to be defined in the configuration file. However, considering that the vector store generally cannot be easily changed, the vectorStore configuration remains in the configuration file.
+
+### Starting the Project
+
+Start the front-end modules using pnpm run dev (or start using IDEA). For the back-end, run the main function of LangChatApp.java:
+
+<PhotoProvider>
+  <div className='flex justify-center my-4'>
+    <PhotoView src="/page/run.png">
+      <img src="/page/run.png" alt="" width='500' />
+    </PhotoView>
+  </div>
+</PhotoProvider>
+
+After starting, visit http://localhost:3003/ to go to the back-end system login page.
+
+<PhotoProvider>
+  <div className='flex justify-center my-4'>
+    <PhotoView src="/page/langchat-ui.png">
+      <img src="/page/langchat-ui.png" alt="" width='700' />
+    </PhotoView>
+  </div>
+</PhotoProvider>

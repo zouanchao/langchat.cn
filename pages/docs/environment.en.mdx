@@ -1,0 +1,55 @@
+import { Tab, Tabs } from 'nextra-theme-docs';
+
+# Environment Setup
+
+Before running the project, ensure that the development environment is properly configured. Below are the basic version requirements:
+
+### Front-end
+
+- Node.js > 18
+
+It is recommended to use `pnpm install` instead of `npm` or `yarn`. If you are a user in China and encounter download speed issues, it is recommended to use the following mirror sources:
+
+<Tabs items={['npm', 'yarn', 'pnpm']}>
+  <Tab>
+    ```bash copy
+    # Set to domestic mirror
+    npm config set registry https://registry.npmmirror.com
+    # Set to official mirror
+    npm config set registry https://registry.npmjs.org/
+  </Tab>
+  <Tab>
+    ```bash copy
+    # Set to domestic mirror
+    yarn config set registry https://registry.npmmirror.com
+    # Set to official mirror
+    yarn config set registry https://registry.yarnpkg.com
+    ```
+  </Tab>
+  <Tab>
+    ```bash copy
+    # Set to domestic mirror
+    pnpm config set registry https://registry.npmmirror.com
+    # Set to official mirror
+    pnpm config set registry https://registry.npmjs.org/
+    ```
+  </Tab>
+</Tabs>
+
+### Back-end
+
+The basic environment requirements for the back-end are:
+
+- JDK ≥ 17
+- MySQL ≥ 8
+- Redis
+
+Considering the project uses the latest technology stack for both front-end and back-end, support for JDK8 is no longer considered (though migrating to JDK8 is straightforward and does not require high costs).
+
+The main reasons for using JDK17 instead of JDK8 are:
+
+1. Development is done with the latest technology stack, including both front-end and back-end. The old version is no longer supported by the official providers.
+2. There are many Prompt contents in the LLM project code, and JDK17's """ text block syntax is very convenient.
+3. Security and performance reasons.
+
+Beyond these, there are not many changes at the code level. If you want to migrate the code to JDK8, simply consider the above two aspects.

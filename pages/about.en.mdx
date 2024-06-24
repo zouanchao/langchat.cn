@@ -1,9 +1,113 @@
 import FooterPage from '../components/layout/footer';
-import { EnData } from '../components/home/data';
+import { ZhData } from '../components/home/data';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 
-# About LangChat
+<style>
+  {`
+    article{
+       padding: 3rem 6rem !important;
+    }
+  `}
+</style>
 
-[LangChat](http://github.com/tycoding/langchat) 是一个
+<div className='text-center mb-8'>
+  # About LangChat
+</div>
+
+[LangChat](http://github.com/tycoding/langchat) is an enterprise AI knowledge base and large model application solution based on the Java ecosystem, helping enterprises quickly build AI large model applications.
+Additionally, LangChat integrates an RBAC permissions system, providing enterprises with an out-of-the-box AI large model product solution.
+
+## Technology Stack
+
+[LangChat](http://github.com/tycoding/langchat) leverages the Java ecosystem with a separated front-end and back-end architecture and utilizes the latest technology stack. The back-end is based on SpringBoot3, while the front-end uses Vue3.
+LangChat not only provides product solutions in the AI domain for enterprises but also serves as a complete Java enterprise application case. This system will guide you through the full development process of SpringBoot3 and Vue3, business modularization, and AI application integration.
+Whether for enterprise development or personal learning, LangChat offers numerous learning cases.
+The involved technology stack includes:
+
+<div className='flex items-center mt-5'>
+  <div className='w-1/2'>
+    **Back-end:**
+
+    - SpringBoot: MVC framework
+    - Mybatis Plus: Persistence framework
+    - Sa-Token: Authorization framework
+    - Hutool: Java utility library
+    - LiteFlow: Java process engine
+    - AI LLM...
+  </div>
+
+  <div>
+    **Front-end:**
+
+    - Vue3
+    - TypeScript
+    - Node
+    - EChart
+    - NaiveUI
+    - vue-flow
+  </div>
+</div>
+
+## LangChain4j
+
+The AI core implementation of LangChat is based on [LangChain4j](https://github.com/langchain4j/langchain4j). LangChain4j is LangChain's solution in the Java ecosystem. Similar to LangChain's design philosophy, LangChain4j provides various out-of-the-box abstractions for LLMs, simplifying their integration with Java applications.
+
+Various function calls, advanced RAG, and web search functionalities of LangChat are based on LangChain4j. For more features, please refer to the LangChain official documentation: [https://docs.langchain4j.dev/](https://docs.langchain4j.dev/)
+
+<PhotoProvider>
+  <div className='flex justify-center my-4'>
+    <PhotoView src="/page/RAG.png">
+      <img src="/page/RAG.png" alt="" width='600'  />
+    </PhotoView>
+  </div>
+</PhotoProvider>
+
+## Supported AI Models for Integration
+
+| Provider                            | Native Image  | Sync Completion | Streaming Completion | Embedding | Image Generation | Scoring | Function Calling
+|--------------------------------------------| ------------- |---------------------------------------------------------------------| ----------- | ------ |-------------------------------| ------ |--------------------------------------------------------------------------------------------|
+| [OpenAI](/integrations/language-models/open-ai)                         |  | ✅ | ✅ | ✅ | ✅ | | ✅ |
+| [Azure OpenAI](/integrations/language-models/azure-open-ai)             |  | ✅ | ✅ | ✅ | ✅ | | ✅ |
+| [Hugging Face](/integrations/language-models/hugging-face)              |  | ✅ | | ✅ |  | | |  |
+| [Amazon Bedrock](/integrations/language-models/amazon-bedrock)         |  | ✅  | |✅ | ✅ | | |
+| [Google Vertex AI Gemini](/integrations/language-models/google-gemini) |  | ✅ | ✅ | | ✅ | | ✅ |
+| [Google Vertex AI](/integrations/language-models/google-palm)          | ✅ | ✅ | | ✅ | ✅ | | |
+| [Mistral AI](/integrations/language-models/mistral-ai)                  |  | ✅ | ✅ | ✅ |  | |✅ |
+| [DashScope](/integrations/language-models/dashscope)                   |  | ✅ | ✅ | ✅ |  | | ✅ |
+| [LocalAI](/integrations/language-models/local-ai)                       |  | ✅ | ✅ | ✅ |  | | ✅ |
+| [Ollama](/integrations/language-models/ollama)                         |  | ✅ | ✅ | ✅ |  | | |
+| Cohere                                                              |  | | | |  | ✅| |
+| [Qianfan](/integrations/language-models/qianfan)                       |  | ✅ | ✅ | ✅ |  | |✅ |
+| [ChatGLM](/integrations/language-models/chatglm)                       |  | ✅ | | |  | |
+| Nomic                                                                |  | | |✅ |  | | |
+| [Anthropic](/integrations/language-models/anthropic)                   |  |✅ | | |  | | ✅ |
+| [Zhipu AI](/integrations/language-models/zhipu-ai)                      |  |✅| ✅| ✅|  | |✅ |
+
+## Supported Vector Databases for Integration
+
+| Provider                                                                              | Storing Metadata | Filtering by Metadata | Removing Embeddings |
+|---------------------------------------------------------------------------------------|------------------|-----------------------|---------------------|
+| [In-memory](/integrations/embedding-stores/in-memory)                                 | ✅                | ✅                     | ✅                   |
+| [Astra DB](/integrations/embedding-stores/astra-db)                                   | ✅                |                       |                     |
+| [Azure AI Search](/integrations/embedding-stores/azure-ai-search)                     | ✅                |                       |                     |
+| [Azure CosmosDB Mongo vCore](/integrations/embedding-stores/azure-cosmos-mongo-vcore) | ✅                |                       |                     |
+| [Cassandra](/integrations/embedding-stores/cassandra)                                 | ✅                |                       |                     |
+| [Chroma](/integrations/embedding-stores/chroma)                                       | ✅                |                       |                     |
+| [Elasticsearch](/integrations/embedding-stores/elasticsearch)                         | ✅                | ✅                     | ✅                   |
+| [Infinispan](/integrations/embedding-stores/infinispan)                               | ✅                |                       |                     |
+| [Milvus](/integrations/embedding-stores/milvus)                                       | ✅                | ✅                     | ✅                   |
+| [MongoDB Atlas](/integrations/embedding-stores/mongodb-atlas)                         | ✅                |                       |                     |
+| [Neo4j](/integrations/embedding-stores/neo4j)                                         |                  |                       |                     |
+| [OpenSearch](/integrations/embedding-stores/opensearch)                               | ✅                |                       |                     |
+| [PGVector](/integrations/embedding-stores/pgvector)                                   | ✅                | ✅                     | ✅                   |
+| [Pinecone](/integrations/embedding-stores/pinecone)                                   |                  |                       |                     |
+| [Qdrant](/integrations/embedding-stores/qdrant)                                       | ✅                |                       |                     |
+| [Redis](/integrations/embedding-stores/redis)                                         | ✅                |                       |                     |
+| [Vearch](/integrations/embedding-stores/vearch)                                       | ✅                |                       |                     |
+| [Vespa](/integrations/embedding-stores/vespa)                                         |                  |                       |                     |
+| [Weaviate](/integrations/embedding-stores/weaviate)                                   | ✅                |                       | ✅                   |
 
 
-<FooterPage data={EnData}/>
+
+
+<FooterPage data={ZhData} />

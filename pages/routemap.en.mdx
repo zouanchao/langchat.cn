@@ -1,0 +1,105 @@
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import FooterPage from '../components/layout/footer';
+import { ZhData } from '../components/home/data';
+
+<style>
+  {`
+    article{
+       padding: 3rem 6rem !important;
+    }
+  `}
+</style>
+
+<div className='text-center mb-8'>
+  # LangChat Roadmap
+</div>
+
+[LangChat](http://github.com/tycoding/langchat) is currently under active development, and some features are still being refined. More new features and various advanced LLM usages will be gradually improved in the future. This project will actively respond to LangChain4j's official features support and integrate more enterprise-level application practices.
+
+Examples include: advanced RAG, Function Call, data parsing support, more LLM providers, and more.
+
+At the same time, [LangChat](http://github.com/tycoding/langchat) is planning and implementing several features:
+
+- More messaging channels: WebSDK, Lark, WeChat, DingTalk, etc.
+- Complex workflow orchestration, customized large model applications
+- Advanced RAG, such as integrating more search engines
+- Integration with more large model applications
+- More enterprise-level application practices
+- And so on
+
+## Web SDK & Messaging Channels
+
+Currently, we are pre-developing a [LangChat Web SDK](http://github.com/tycoding/langchat-web-sdk) project for quick integration of third-party Web LLM Bots, such as customer service robots, private enterprise knowledge bases, etc.
+
+[LangChat Web SDK](http://github.com/tycoding/langchat-web-sdk) will be developed using native JavaScript and packaged into a single JS file (including js/css/html code) with the help of Vite.
+
+The packaged JS file can be introduced into any third-party Web system, and a chatbot entry will be displayed in the lower right corner of the page. Once the bot information is initialized, third-party applications can integrate the chatbot with zero intrusion.
+
+Preview effects:
+
+<PhotoProvider>
+  <div className='flex overflow-hidden overflow-x-auto'>
+    <PhotoView src="/page/routemap_img1.png">
+      <img src="/page/routemap_img1.png" alt="" width='600'  />
+    </PhotoView>
+    <PhotoView src="/page/routemap_img2.png">
+      <img src="/page/routemap_img2.png" alt="" width='600'  />
+    </PhotoView>
+  </div>
+</PhotoProvider>
+
+For third-party websites, simply embed the JS file:
+
+```html copy
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LangChat WebSDK Example</title>
+    <script src="../dist/langchat_web_sdk.min.js"></script>
+</head>
+<body>
+    <div>This is custom page container...</div>
+    <script>
+        // Configuring sdk Information
+        new initLangChat('key', ...)
+    </script>
+</body>
+</html>
+```
+
+Additionally, we will gradually try to integrate with some domestic application channels: WeChat customer service robots, enterprise WeChat robots, Lark robots, DingTalk robots.
+(Of course, there may be some restrictions during development, such as the WeChat customer service interface requiring enterprise information to call, etc. We welcome friends who can join us.)
+
+## Workflows
+
+Initially, my idea was to create a Workflow-based robot, rather than the current method involving different nodes (model configuration, Prompt configuration, knowledge base configuration) with complex settings.
+
+Previously, I considered using Vue-Flow and LiteFlow for development, but I couldn't find a good workflow orchestration execution solution at that time, leading to the project being delayed.
+Now I am considering developing a standalone **langchat-flow** module based on existing features, providing a fast and highly customizable way to orchestrate and publish robotic applications.
+
+<PhotoProvider>
+  <div className='flex overflow-hidden overflow-x-auto'>
+    <PhotoView src="/page/flow1.png">
+      <img src="/page/flow1.png" alt="" width='600'  />
+    </PhotoView>
+    <PhotoView src="/page/flow2.png">
+      <img src="/page/flow2.png" alt="" width='600'  />
+    </PhotoView>
+  </div>
+  <PhotoView src="/page/flow3.png">
+    <div className='w-full flex justify-center'>
+      <img src="/page/flow3.png" alt="" width='800' />
+    </div>
+  </PhotoView>
+</PhotoProvider>
+
+## More...
+
+- Midjourney && Text-Image
+- Web Search
+- Advance RAG
+- Custom...
+- And so on...
+
+<FooterPage data={ZhData} />

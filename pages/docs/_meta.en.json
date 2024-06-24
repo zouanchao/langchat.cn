@@ -1,10 +1,5 @@
 {
   "introduction": "Introduction",
   "environment": "Environment",
-  "getting-started": "Getting Started",
-  "why-tailwind-variants": {
-    "title": "Why Tailwind Variants?",
-    "display": "hidden"
-  },
-  "examples": "Examples"
+  "getting-started": "Getting Started"
 }

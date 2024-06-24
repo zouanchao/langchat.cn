@@ -10,31 +10,27 @@ import { ZhData } from '../components/home/data';
   `}
 </style>
 
-<div className='text-center mb-8'>
-  # LangChat 路线图
-</div>
+[LangChat](http://github.com/tycoding/langchat) 目前仍在积极开发中，有些功能仍在完善。更多的新特性，以及LLM的各种高级用法，
+将在后续逐步完善。本项目将积极响应LangChain4j官方的特性支持，集成更多企业级应用实践。
 
-[LangChat](http://github.com/tycoding/langchat) 目前仍在积极开发中，有些功能仍处于完善中。更多的新特性，以及LLM的各种高级用法，
-后续将逐渐完善。本项目将积极响应LangChain4j官方的特性支持，集成更多企业级应用实践。
+例如：高级RAG、Function Call、数据解析支持、更多的LLM供应商等。
 
-例如：高级RAG、Function Call、数据解析支持、更多的LLM供应商 等等......
+同时，[LangChat](http://github.com/tycoding/langchat) 正在规划和实现以下功能：
 
-同时[LangChat](http://github.com/tycoding/langchat)正在规划和实践一些功能：
-
-- 更多的消息发布渠道：WebSDK、飞书、微信、钉钉...
-- 复杂的流程编排Workflows，定制专属大模型应用...
-- 高级RAG，如接入更多的搜索引擎...
-- 接入更多大模型应用...
-- 更多的企业级应用实践...
-- ......
+- 更多的消息发布渠道：WebSDK、飞书、微信、钉钉等
+- 复杂的流程编排Workflows，定制专属大模型应用
+- 高级RAG，如接入更多的搜索引擎
+- 接入更多大模型应用
+- 更多的企业级应用实践
+- 等等
 
 ## Web SDK & 消息渠道商
 
-目前，我们预开发一套 [LangChat Web SDK](http://github.com/tycoding/langchat-web-sdk) 项目，用于作为第三方Web端LLM Bot的快速集成，例如：客服机器人、企业私有知识库等等......
+目前，我们预开发了一套 [LangChat Web SDK](http://github.com/tycoding/langchat-web-sdk) 项目，用于作为第三方Web端LLM Bot的快速集成，例如：客服机器人、企业私有知识库等。
 
-[LangChat Web SDK](http://github.com/tycoding/langchat-web-sdk) 将使用原生JavaScript开发，借助Vite将整个项目打包为一个JS文件（文件中包含了js/css/html代码），
+[LangChat Web SDK](http://github.com/tycoding/langchat-web-sdk) 将使用原生JavaScript开发，并借助Vite将整个项目打包为一个JS文件（文件中包含了js/css/html代码）。
 
-打包后的JS文件，在任意的第三方Web系统中引入，都会在页面右下角展示一个聊天机器人入口，当初始化机器人信息后，第三方应用便可以零侵入性的集成聊天机器人。
+打包后的JS文件，可以在任意的第三方Web系统中引入，然后在页面右下角展示一个聊天机器人入口。当初始化机器人信息后，第三方应用便可以零侵入性地集成聊天机器人。
 
 预览效果：
 
@@ -49,7 +45,7 @@ import { ZhData } from '../components/home/data';
   </div>
 </PhotoProvider>
 
-对于第三方网页只需要嵌入JS即可：
+对于第三方网页，只需要嵌入JS即可：
 
 ```html copy
 <!DOCTYPE html>
@@ -69,16 +65,38 @@ import { ZhData } from '../components/home/data';
 </html>
 ```
 
-同时，我们会逐渐尝试接入国内的一些应用渠道：微信客服机器人、企业微信机器人、飞书机器人、钉钉机器人...
-（当然开发中可能会受很多限制，例如微信客服接口需要企业信息才能调用等，欢迎有条件的朋友加入我们）
+同时，我们会逐渐尝试接入国内的一些应用渠道：微信客服机器人、企业微信机器人、飞书机器人、钉钉机器人。
+（当然，开发中可能会有一些限制，例如微信客服接口需要企业信息才能调用等，欢迎有条件的朋友加入我们）
 
 ## Workflows
 
-其实一开始我想做的就是基于WorkFlow机器人，而非现在这样通过不同节点（模型配置、Prompt配置、知识库配置）这样繁琐的配置。
+其实一开始我的想法是基于WorkFlow机器人，而不是现在这样，通过不同节点（模型配置、Prompt配置、知识库配置）进行繁琐的配置。
 
-之前考虑的使用Vue-Flow和LiteFlow开发，但是苦于当时一直没有好的流程编排的执行方案，才导致了项目拖到现在。
-现在我考虑在现有功能基础上单独开发 **langchat-flow** 模块，提供一种快速、高自定义的编排方式定制和发布机器人应用。
+之前考虑过使用Vue-Flow和LiteFlow开发，但当时一直没有好的流程编排执行方案，导致项目拖延至今。
+现在，我考虑在现有功能基础上单独开发 **langchat-flow** 模块，提供一种快速、高度自定义的编排方式来定制和发布机器人应用。
+
+<PhotoProvider>
+  <div className='flex overflow-hidden overflow-x-auto'>
+    <PhotoView src="/page/flow1.png">
+      <img src="/page/flow1.png" alt="" width='600'  />
+    </PhotoView>
+    <PhotoView src="/page/flow2.png">
+      <img src="/page/flow2.png" alt="" width='600'  />
+    </PhotoView>
+  </div>
+  <PhotoView src="/page/flow3.png">
+    <div className='w-full flex justify-center'>
+      <img src="/page/flow3.png" alt="" width='800' />
+    </div>
+  </PhotoView>
+</PhotoProvider>
 
 ## More...
+
+- Midjourney && Text-Image
+- Web Search
+- Advance RAG
+- Custom...
+- And so on...
 
 <FooterPage data={ZhData} />

@@ -2,13 +2,13 @@ import { Tab, Tabs } from 'nextra-theme-docs';
 
 # 环境准备
 
-项目运行之前首先要保证已经搭建好与之相匹配的开发环境，这里需要的最基础的版本要求：
+在运行项目之前，需要确保已经搭建好与之相匹配的开发环境。以下是基础的版本要求：
 
 ### 前端
 
 - Node.js > 18
 
-建议安装并使用`pnpm install`，不建议使用`npm`或`yarn`，如果你是中国用户遇到下载速度问题，推荐你安装下列镜像源：
+建议安装并使用 `pnpm install`，不建议使用 `npm` 或 `yarn`。如果你是中国用户并遇到下载速度问题，推荐使用以下镜像源：
 
 <Tabs items={['npm', 'yarn', 'pnpm']}>
   <Tab>
@@ -17,7 +17,6 @@ import { Tab, Tabs } from 'nextra-theme-docs';
     npm config set registry https://registry.npmmirror.com
     # 设置为官方镜像
     npm config set registry https://registry.npmjs.org/
-    ```
   </Tab>
   <Tab>
     ```bash copy
@@ -39,6 +38,18 @@ import { Tab, Tabs } from 'nextra-theme-docs';
 
 ### 后端
 
-因为考虑到项目前后端都使用的最新的技术栈，因此这里不再考虑支持`JDK8`了（当然如果你想要迁移到jdk8也是非常简单的，并不需要太高的迁移成本）
+后端的基础环境要求如下：
 
-蛀牙
+- JDK ≥ 17
+- MySQL ≥ 8
+- Redis
+
+由于本项目使用了最新的技术栈，这里不再考虑支持 JDK8。当然，如果你想要迁移到 JDK8，成本也并不高。
+
+本项目选择使用 JDK17 而非 JDK8 的主要原因：
+
+1. 使用最新的技术栈进行开发，包括前端和后端。老版本官方已经不再提供支持。
+2. 在 **LLM** 项目代码中会有很多 Prompt 内容，JDK17 的 """ 文本块写法非常方便。
+3. 安全性和性能的考虑。
+
+除此之外，代码层面并没有太多变化。如果你希望将代码迁移到 JDK8，只需要从上述两个方面进行考虑即可。

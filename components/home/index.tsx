@@ -12,14 +12,14 @@ export default function HomePage({ data }) {
       <div className="pb-10 pt-20 dark:text-white">
         <HeroPage data={data} />
 
-        <div className="mt-14 ">
+        <div className="mt-10">
           <div className="bottom-0 z-0 w-full bg-[url('/looper-pattern.svg')] bg-left bg-no-repeat">
             <div className="flex w-full items-center justify-center">
               <div className="max-w-4xl">
                 <img
                   alt=""
-                  className="w-full rounded-lg border shadow-lg"
-                  src="https://raw.githubusercontent.com/sidiDev/remote-assets/main/Safari%20(Big%20Sur)%20-%20Light.png"
+                  className="w-full rounded-lg"
+                  src="/page/banner.png"
                 />
               </div>
             </div>
