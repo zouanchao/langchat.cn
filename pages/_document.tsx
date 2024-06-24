@@ -7,6 +7,7 @@ const Document = () => {
       <Head />
       <body>
         <SkipNavLink styled />
+        <div className="header-bg" />
         <Main />
         <NextScript />
       </body>

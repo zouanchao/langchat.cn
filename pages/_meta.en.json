@@ -37,6 +37,13 @@
       "layout": "full"
     }
   },
+  "contact": {
+    "title": "Contact",
+    "type": "page",
+    "theme": {
+      "layout": "full"
+    }
+  },
   "docs": {
     "title": "Document",
     "type": "page"

@@ -37,6 +37,13 @@
       "layout": "full"
     }
   },
+  "contact": {
+    "title": "合作",
+    "type": "page",
+    "theme": {
+      "layout": "full"
+    }
+  },
   "docs": {
     "title": "文档",
     "type": "page"

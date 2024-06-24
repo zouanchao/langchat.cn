@@ -11,7 +11,7 @@ export default function SubscribePage({ data }) {
   };
 
   return (
-    <section className="mx-auto py-14">
+    <section className="mx-auto mt-32">
       <div className="relative overflow-hidden rounded-2xl border border-[#ffffff33] bg-[#101010] px-4 py-14 md:px-8">
         <div className="relative z-10 mx-auto max-w-2xl sm:text-center">
           <div className="space-y-5">

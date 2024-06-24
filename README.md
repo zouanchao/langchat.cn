@@ -3,7 +3,8 @@
 Project repository: [https://github.com/tycoding/langchat](https://github.com/tycoding/langchat)
 
 ## Docs
-![](public/page/banner.png)
+
+![](public/page/part4.png)
 
 
 ## License
