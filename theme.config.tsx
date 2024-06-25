@@ -4,7 +4,7 @@ import { LocaleSwitch, ThemeSwitch, useConfig } from 'nextra-theme-docs';
 import React from 'react';
 import { useRouter } from 'next/router';
 
-import { Logo, tvs } from '@components';
+import { badge } from '@components/elements';
 
 const config: DocsThemeConfig = {
   darkMode: true,
@@ -17,49 +17,22 @@ const config: DocsThemeConfig = {
   ],
   logo: (
     <div className="flex items-center">
-      <Logo height={30} />
+      <img alt="logo" className="w-10" src="/logo.png" />
       <b className="ml-1.5 hidden text-sm font-semibold sm:block sm:text-base">
         LangChat
       </b>
-      <span className={tvs.badge({ class: 'hidden sm:flex' })}>
-        By TyCoding
-      </span>
+      <span className={badge({ class: 'hidden sm:flex' })}>By TyCoding</span>
     </div>
   ),
   head: function useHead() {
     const config = useConfig();
-    const description =
-      config.frontMatter.description ||
-      'The power of Tailwind combined with a first-class variant API.';
-    const image =
-      config.frontMatter.image || 'https://tailwind-variants.org/banner.png';
+    const description = config.frontMatter.description || 'LangChat Docs';
+    const image = config.frontMatter.image;
 
     return (
       <>
         {/* Favicons, meta */}
-        <link
-          href="/favicon/apple-touch-icon.png"
-          rel="apple-touch-icon"
-          sizes="180x180"
-        />
-        <link
-          href="/favicon/favicon-32x32.png"
-          rel="icon"
-          sizes="32x32"
-          type="image/png"
-        />
-        <link
-          href="/favicon/favicon-16x16.png"
-          rel="icon"
-          sizes="16x16"
-          type="image/png"
-        />
-        <link href="/favicon/site.webmanifest" rel="manifest" />
-        <link
-          color="#000000"
-          href="/favicon/safari-pinned-tab.svg"
-          rel="mask-icon"
-        />
+        <link href="/logo.png" rel="icon" />
         <meta content="#ffffff" name="msapplication-TileColor" />
         <meta content="en" httpEquiv="Content-Language" />
         <meta content={description} name="description" />

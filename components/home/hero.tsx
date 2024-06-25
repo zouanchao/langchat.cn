@@ -1,4 +1,4 @@
-import { tvs } from '@components';
+import { button } from '@components/elements';
 
 export default function HeroPage({ data }) {
   return (
@@ -17,11 +17,11 @@ export default function HeroPage({ data }) {
         </h2>
         <p className="mx-auto max-w-3xl">{data.hero.des}</p>
         <div className="flex flex-col items-center justify-center gap-x-3 space-y-2 sm:flex sm:flex-row sm:space-y-0">
-          <a className={tvs.button()} href="/docs/introduction.en">
+          <a className={button()} href="/docs/introduction.en">
             {data.hero.frontBtn}
           </a>
           <a
-            className={tvs.button({
+            className={button({
               flat: true,
               color: 'neutral'
             })}

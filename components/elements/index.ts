@@ -72,10 +72,3 @@ export const card = tv({
     'dark:bg-zinc-500/20'
   ]
 });
-
-export const tvs = {
-  button,
-  badge,
-  box,
-  card
-};

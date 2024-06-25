@@ -11,7 +11,7 @@ export default function FooterPage({ data }) {
         },
         {
           label: 'LangChat',
-          link: 'https://langchat.cn'
+          link: 'http://langchat.cn'
         },
         {
           label: 'TyCoding Blog',
@@ -28,11 +28,11 @@ export default function FooterPage({ data }) {
       children: [
         {
           label: data.footer.frontBtn,
-          link: 'https://front.langchat.cn/'
+          link: 'http://front.langchat.cn/'
         },
         {
           label: data.footer.clientBtn,
-          link: 'https://backend.langchat.cn/'
+          link: 'http://backend.langchat.cn/'
         }
       ]
     },

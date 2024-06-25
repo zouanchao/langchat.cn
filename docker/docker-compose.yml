@@ -2,9 +2,6 @@ version: "3"
 
 services:
   langchat.cn:
-    build:
-      context: ../
-      dockerfile: Dockerfile
-    image: langchat.cn
+    image: registry.cn-beijing.aliyuncs.com/langchat/langchat.cn
     ports:
       - "3000:3000"
