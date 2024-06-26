@@ -86,7 +86,7 @@ export default function FooterPage({ data }) {
 
   return (
     <footer className="mt-20">
-      <div className="mx-auto !mb-14 !mt-40">
+      <div className="mx-auto !mt-40">
         <div className="lg:flex">
           <div className="w-full px-6 lg:w-1/4">
             <div className="space-y-4">

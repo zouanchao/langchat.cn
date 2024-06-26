@@ -1,4 +1,5 @@
 import { button } from '@components/elements';
+import { GithubIcon } from '@components/icons';
 
 export default function HeroPage({ data }) {
   return (
@@ -17,7 +18,11 @@ export default function HeroPage({ data }) {
         </h2>
         <p className="mx-auto max-w-3xl">{data.hero.des}</p>
         <div className="flex flex-col items-center justify-center gap-x-3 space-y-2 sm:flex sm:flex-row sm:space-y-0">
-          <a className={button()} href="/docs/introduction.en">
+          <a
+            className={button()}
+            href="https://backend.langchat.cn/"
+            target="_blank"
+          >
             {data.hero.frontBtn}
           </a>
           <a
@@ -26,11 +31,12 @@ export default function HeroPage({ data }) {
               color: 'neutral'
             })}
             href="https://github.com/tycoding/langchat"
-            rel="noopener noreferrer"
             target="_blank"
-            title="github homepage"
           >
-            {data.hero.clientBtn}
+            <div className="flex items-center gap-1.5">
+              <GithubIcon />
+              <span>Github</span>
+            </div>
           </a>
         </div>
       </div>
