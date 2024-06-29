@@ -20,7 +20,7 @@ export default function HeroPage({ data }) {
         <div className="flex flex-col items-center justify-center gap-x-3 space-y-2 sm:flex sm:flex-row sm:space-y-0">
           <a
             className={button()}
-            href="https://backend.langchat.cn/"
+            href="http://backend.langchat.cn/"
             target="_blank"
           >
             {data.hero.frontBtn}
